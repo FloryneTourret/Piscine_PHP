@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mendeleiev</title>
+    <style>
+    
+    img {
+        width: 25vw;
+        margin-left: calc(75vw / 2);
+    }
+
+    table {
+        margin: auto;
+    }
+
+    table tr td {
+        width: 5vw;
+        height: 5vh;
+    }
+    .blank {
+        background-color: blank;
+    }
+
+    tr .elem {
+        border: .1rem solid black;
+    }
+
+    td p {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: .5rem;
+    }
+
+    tr .teal{
+        background-color: teal;
+    }
+
+    tr .pink{
+        background-color: rosybrown;
+    }
+
+    tr .blue{
+        background-color: royalblue;
+    }
+    
+    tr .piggy{
+        background-color: lightcoral;
+    }
+
+    tr .ble{
+        background-color: burlywood;
+    }
+
+    tr .light{
+        background-color: bisque;
+    }
+
+    tr .levraible{
+        background-color: yellow;
+    }
+
+    tr .herbe {
+        background-color: green;
+    }
+
+    tr .prison {
+        background-color: lightgrey;
+    }
+
+    tr .petitbleu {
+        background-color: rgb(134, 153, 158);
+    }
+
+    tr .moyenbleu {
+        background-color: rgb(136, 209, 233) !important;
+    }
+
+    tr .toutseul {
+        background-color: rgb(243, 197, 189);
+    }
+    tr .elem .masse {
+        font-size: 5px;
+        float: right;
+    }
+
+    tr .elem .numero {
+        font-size: 5px;
+    }
+
+    @media screen and (min-width: 640px) {
+        tr .elem .masse {
+            font-size: 10px;
+        }
+        tr .elem .numero {
+            font-size: 10px;
+        }
+        td p {
+            font-size: 1rem;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        tr .elem .masse {
+            font-size: 15px;
+        }
+        tr .elem .numero {
+            font-size: 15px;
+        }
+        td p {
+            font-size: 1.5rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/DIMendeleevCab.jpg/220px-DIMendeleevCab.jpg" alt="mendelebg">
+    <table contenteditable="true">
+        <tr class="line1">
+            <td class="elem teal"><span class="masse">1.0079</span><p>H</p><span class="numero">1</span></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="elem pink"><span class="masse">4.0026</span><p>He</p><span class="numero">2</span></td>
+        </tr>
+        <tr class="line2">
+            <td class="elem"><span class="masse">6.941</span><p>Li</p><span class="numero">3</span></td>
+            <td class="elem piggy"><span class="masse">9.0122</span><p>Be</p><span class="numero">4</span></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="elem herbe"><span class="masse">10.811</span><p>B</p><span class="numero">5</span></td>
+            <td class="elem teal"><span class="masse">12.011</span><p>C</p><span class="numero">6</span></td>
+            <td class="elem teal"><span class="masse">14.007</span><p>N</p><span class="numero">7</span></td>
+            <td class="elem teal"><span class="masse">15.999</span><p>O</p><span class="numero">8</span></td>
+            <td class="elem blue"><span class="masse">18.998</span><p>F</p><span class="numero">9</span></td>
+            <td class="elem pink"><span class="masse">20.180</span><p>Ne</p><span class="numero">10</span></td>
+        </tr>
+        <tr class="line3">
+            <td class="elem"><span class="masse">22.990</span><p>Na</p><span class="numero">11</span></td>
+            <td class="elem piggy"><span class="masse">24.305</span><p>Mg</p><span class="numero">12</span></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="elem prison"><span class="masse">26.982</span><p>Al</p><span class="numero">13</span></td>
+            <td class="elem herbe"><span class="masse">28.086</span><p>Si</p><span class="numero">14</span></td>
+            <td class="elem teal"><span class="masse">30.974</span><p>P</p><span class="numero">15</span></td>
+            <td class="elem teal"><span class="masse">32.065</span><p>S</p><span class="numero">16</span></td>
+            <td class="elem blue"><span class="masse">35.453</span><p>Cl</p><span class="numero">17</span></td>
+            <td class="elem pink"><span class="masse">39.948</span><p>Ar</p><span class="numero">18</span></td>
+        </tr>
+        <tr class="line4">
+            <td class="elem"><span class="masse">39.098</span><p>K</p><span class="numero">19</span></td>
+            <td class="elem piggy"><span class="masse">40.078</span><p>Ca</p><span class="numero">20</span></td>
+            <td class="elem ble"><span class="masse">44.956</span><p>Sc</p><span class="numero">21</span></td>
+            <td class="elem ble"><span class="masse">47.867</span><p>Ti</p><span class="numero">22</span></td>
+            <td class="elem ble"><span class="masse">50.942</span><p>V</p><span class="numero">23</span></td>
+            <td class="elem ble"><span class="masse">51.996</span><p>Cr</p><span class="numero">24</span></td>
+            <td class="elem ble"><span class="masse">54.938</span><p>Mn</p><span class="numero">25</span></td>
+            <td class="elem ble"><span class="masse">55.845</span><p>Fe</p><span class="numero">26</span></td>
+            <td class="elem ble"><span class="masse">58.933</span><p>Co</p><span class="numero">27</span></td>
+            <td class="elem ble"><span class="masse">58.693</span><p>Ni</p><span class="numero">28</span></td>
+            <td class="elem ble"><span class="masse">63.546</span><p>Cu</p><span class="numero">29</span></td>
+            <td class="elem ble"><span class="masse">65.38</span><p>Zn</p><span class="numero">30</span></td>
+            <td class="elem prison"><span class="masse">69.723</span><p>Ga</p><span class="numero">31</span></td>
+            <td class="elem herbe"><span class="masse">72.64</span><p>Ge</p><span class="numero">32</span></td>
+            <td class="elem herbe"><span class="masse">74.922</span><p>As</p><span class="numero">33</span></td>
+            <td class="elem teal"><span class="masse">78.96</span><p>Se</p><span class="numero">34</span></td>
+            <td class="elem blue"><span class="masse">79.904</span><p>Br</p><span class="numero">35</span></td>
+            <td class="elem pink"><span class="masse">83.798</span><p>Kr</p><span class="numero">36</span></td>
+        </tr>
+        <tr class="line5">
+            <td class="elem"><span class="masse">85.468</span><p>Rb</p><span class="numero">37</span></td>
+            <td class="elem piggy"><span class="masse">87.62</span><p>Sr</p><span class="numero">38</span></td>
+            <td class="elem ble"><span class="masse">88.906</span><p>Y</p><span class="numero">39</span></td>
+            <td class="elem ble"><span class="masse">91.224</span><p>Zr</p><span class="numero">40</span></td>
+            <td class="elem ble"><span class="masse">92.906</span><p>Nb</p><span class="numero">41</span></td>
+            <td class="elem ble"><span class="masse">95.96</span><p>Mo</p><span class="numero">42</span></td>
+            <td class="elem ble"><span class="masse">98</span><p>Tc</p><span class="numero">43</span></td>
+            <td class="elem ble"><span class="masse">101.07</span><p>Ru</p><span class="numero">44</span></td>
+            <td class="elem ble"><span class="masse">102.91</span><p>Rh</p><span class="numero">45</span></td>
+            <td class="elem ble"><span class="masse">106.42</span><p>Pd</p><span class="numero">46</span></td>
+            <td class="elem ble"><span class="masse">107.87</span><p>Ag</p><span class="numero">47</span></td>
+            <td class="elem ble"><span class="masse">112.41</span><p>Cd</p><span class="numero">48</span></td>
+            <td class="elem prison"><span class="masse">114.82</span><p>In</p><span class="numero">49</span></td>
+            <td class="elem prison"><span class="masse">118.71</span><p>Sn</p><span class="numero">50</span></td>
+            <td class="elem herbe"><span class="masse">121.76</span><p>Sb</p><span class="numero">51</span></td>
+            <td class="elem herbe"><span class="masse">127.60</span><p>Te</p><span class="numero">52</span></td>
+            <td class="elem blue"><span class="masse">126.90</span><p>I</p><span class="numero">53</span></td>
+            <td class="elem pink"><span class="masse">131.29</span><p>Xe</p><span class="numero">54</span></td>
+        </tr>
+        <tr class="line6">
+            <td class="elem"><span class="masse">132.91</span><p>Cs</p><span class="numero">55</span></td>
+            <td class="elem piggy"><span class="masse">137.33</span><p>Ba</p><span class="numero">56</span></td>
+            <td class="elem light"><p>La-Lu</p><span class="numero">57-71</span></td>
+            <td class="elem ble"><span class="masse">178.49</span><p>Hf</p><span class="numero">72</span></td>
+            <td class="elem ble"><span class="masse">180.95</span><p>Ta</p><span class="numero">73</span></td>
+            <td class="elem ble"><span class="masse">183.84</span><p>W</p><span class="numero">74</span></td>
+            <td class="elem ble"><span class="masse">186.21</span><p>Re</p><span class="numero">75</span></td>
+            <td class="elem ble"><span class="masse">190.23</span><p>Os</p><span class="numero">76</span></td>
+            <td class="elem ble"><span class="masse">192.22</span><p>Ir</p><span class="numero">77</span></td>
+            <td class="elem ble"><span class="masse">195.08</span><p>Pt</p><span class="numero">78</span></td>
+            <td class="elem ble"><span class="masse">196.97</span><p>Au</p><span class="numero">79</span></td>
+            <td class="elem ble"><span class="masse">200.59</span><p>Hg</p><span class="numero">80</span></td>
+            <td class="elem prison"><span class="masse">204.38</span><p>Tl</p><span class="numero">81</span></td>
+            <td class="elem prison"><span class="masse">207.2</span><p>Pb</p><span class="numero">82</span></td>
+            <td class="elem prison"><span class="masse">208.98</span><p>Bi</p><span class="numero">83</span></td>
+            <td class="elem herbe"><span class="masse">(209)</span><p>Po</p><span class="numero">84</span></td>
+            <td class="elem blue"><span class="masse">(210)</span><p>At</p><span class="numero">85</span></td>
+            <td class="elem pink"><span class="masse">(222)</span><p>Rn</p><span class="numero">86</span></td>
+        </tr>
+        <tr class="line7">
+            <td class="elem"><span class="masse">(223)</span><p>Fr</p><span class="numero">87</span></td>
+            <td class="elem piggy"><span class="masse">(226)</span><p>Ra</p><span class="numero">88</span></td>
+            <td class="elem levraible"><p>Ac-Lr</p><span class="numero">89-103</span></td>
+            <td class="elem ble"><span class="masse">(267)</span><p>Rf</p><span class="numero">104</span></td>
+            <td class="elem ble"><span class="masse">(268)</span><p>Db</p><span class="numero">105</span></td>
+            <td class="elem ble"><span class="masse">(271)</span><p>Sg</p><span class="numero">106</span></td>
+            <td class="elem ble"><span class="masse">(272)</span><p>Bh</p><span class="numero">107</span></td>
+            <td class="elem ble"><span class="masse">(277)</span><p>Hs</p><span class="numero">108</span></td>
+            <td class="elem ble"><span class="masse">(276)</span><p>Mt</p><span class="numero">109</span></td>
+            <td class="elem ble"><span class="masse">(281)</span><p>Ds</p><span class="numero">110</span></td>
+            <td class="elem ble"><span class="masse">(280)</span><p>Rg</p><span class="numero">111</span></td>
+            <td class="elem ble"><span class="masse">(285)</span><p>Cn</p><span class="numero">112</span></td>
+            <td class="elem petitbleu"><span class="masse">(...)</span><p>Uut</p><span class="numero">113</span></td>
+            <td class="elem prison"><span class="masse">(287)</span><p>Fl</p><span class="numero">114</span></td>
+            <td class="elem petitbleu"><span class="masse">(...)</span><p>Uup</p><span class="numero">115</span></td>
+            <td class="elem prison"><span class="masse">(291)</span><p>Lv</p><span class="numero">116</span></td>
+            <td class="elem moyenbleu"><span class="masse">(...)</span><p>Uus</p><span class="numero">117</span></td>
+            <td class="elem toutseul"><span class="masse">(...)</span><p>Uuo</p><span class="numero">118</span></td>
+        </tr>
+        <tr class="line8">
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="elem light"><span class="masse">138.91</span><p>La</p><span class="numero">57</span></td>
+            <td class="elem light"><span class="masse">140.12</span><p>Ce</p><span class="numero">58</span></td>
+            <td class="elem light"><span class="masse">140.91</span><p>Pr</p><span class="numero">59</span></td>
+            <td class="elem light"><span class="masse">144.24</span><p>Nd</p><span class="numero">60</span></td>
+            <td class="elem light"><span class="masse">(145)</span><p>Pm</p><span class="numero">61</span></td>
+            <td class="elem light"><span class="masse">150.36</span><p>Sm</p><span class="numero">62</span></td>
+            <td class="elem light"><span class="masse">151.96</span><p>Eu</p><span class="numero">63</span></td>
+            <td class="elem light"><span class="masse">157.25</span><p>Gd</p><span class="numero">64</span></td>
+            <td class="elem light"><span class="masse">158.93</span><p>Tb</p><span class="numero">65</span></td>
+            <td class="elem light"><span class="masse">162.50</span><p>Dy</p><span class="numero">66</span></td>
+            <td class="elem light"><span class="masse">164.93</span><p>Ho</p><span class="numero">67</span></td>
+            <td class="elem light"><span class="masse">167.26</span><p>Er</p><span class="numero">68</span></td>
+            <td class="elem light"><span class="masse">168.93</span><p>Tm</p><span class="numero">69</span></td>
+            <td class="elem light"><span class="masse">173.05</span><p>Yb</p><span class="numero">70</span></td>
+            <td class="elem light"><span class="masse">174.97</span><p>Lu</p><span class="numero">71</span></td>
+        </tr>
+        <tr class="line9">
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="elem levraible"><span class="masse">(227)</span><p>Ac</p><span class="numero">89</span></td>
+            <td class="elem levraible"><span class="masse">232.04</span><p>Th</p><span class="numero">90</span></td>
+            <td class="elem levraible"><span class="masse">231.04</span><p>Pa</p><span class="numero">91</span></td>
+            <td class="elem levraible"><span class="masse">238.03</span><p>U</p><span class="numero">92</span></td>
+            <td class="elem levraible"><span class="masse">(237)</span><p>Np</p><span class="numero">93</span></td>
+            <td class="elem levraible"><span class="masse">(244)</span><p>Pu</p><span class="numero">94</span></td>
+            <td class="elem levraible"><span class="masse">(243)</span><p>Am</p><span class="numero">95</span></td>
+            <td class="elem levraible"><span class="masse">(247)</span><p>Cm</p><span class="numero">96</span></td>
+            <td class="elem levraible"><span class="masse">(247)</span><p>Bk</p><span class="numero">97</span></td>
+            <td class="elem levraible"><span class="masse">(251)</span><p>Cf</p><span class="numero">98</span></td>
+            <td class="elem levraible"><span class="masse">(252)</span><p>Es</p><span class="numero">99</span></td>
+            <td class="elem levraible"><span class="masse">(257)</span><p>Fm</p><span class="numero">100</span></td>
+            <td class="elem levraible"><span class="masse">(258)</span><p>Md</p><span class="numero">101</span></td>
+            <td class="elem levraible"><span class="masse">(259)</span><p>No</p><span class="numero">102</span></td>
+            <td class="elem levraible"><span class="masse">(262)</span><p>Lr</p><span class="numero">103</span></td>
+        </tr>
+    </table>
+</body>
+</html>
