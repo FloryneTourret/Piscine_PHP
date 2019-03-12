@@ -1,0 +1,105 @@
+img {
+    width: 25vw;
+    margin-left: calc(75vw / 2);
+}
+
+table {
+    margin: auto;
+}
+
+table tr td {
+    width: 5vw;
+    height: 5vh;
+}
+.blank {
+    background-color: blank;
+}
+
+tr .elem {
+    border: .1rem solid black;
+}
+
+td p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: .5rem;
+}
+
+tr .teal{
+    background-color: teal;
+}
+
+tr .pink{
+    background-color: rosybrown;
+}
+
+tr .blue{
+    background-color: royalblue;
+}
+
+tr .piggy{
+    background-color: lightcoral;
+}
+
+tr .ble{
+    background-color: burlywood;
+}
+
+tr .light{
+    background-color: bisque;
+}
+
+tr .levraible{
+    background-color: yellow;
+}
+
+tr .herbe {
+    background-color: green;
+}
+
+tr .prison {
+    background-color: lightgrey;
+}
+
+tr .petitbleu {
+    background-color: rgb(134, 153, 158);
+}
+
+tr .moyenbleu {
+    background-color: rgb(136, 209, 233) !important;
+}
+
+tr .toutseul {
+    background-color: rgb(243, 197, 189);
+}
+tr .elem .masse {
+    font-size: 5px;
+    float: right;
+}
+
+tr .elem .numero {
+    font-size: 5px;
+}
+
+@media screen and (min-width: 640px) {
+    tr .elem .masse {
+        font-size: 10px;
+    }
+    tr .elem .numero {
+        font-size: 10px;
+    }
+    td p {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    tr .elem .masse {
+        font-size: 15px;
+    }
+    tr .elem .numero {
+        font-size: 15px;
+    }
+    td p {
+        font-size: 1.5rem;
+    }
+}
