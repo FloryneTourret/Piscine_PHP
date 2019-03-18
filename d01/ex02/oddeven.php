@@ -12,7 +12,7 @@ while (1)
 		if ($number % 2 == 0)
 			echo "Le chiffre ".$number." est Pair\n";
 		else
-			echo "Le chifre ".$number." est Impair\n";
+			echo "Le chiffre ".$number." est Impair\n";
 	}
 	else
 		echo "'".$number."' n'est pas un chiffre\n";

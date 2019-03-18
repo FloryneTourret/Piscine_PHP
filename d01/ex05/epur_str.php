@@ -8,9 +8,7 @@ function ft_split($str)
 	return ($array);
 }
 
-if ($argc != 2)
-	echo "\n";
-else
+if ($argc == 2)
 {
 	$i = 0;
 	$array = ft_split($argv[1]);
@@ -21,6 +19,7 @@ else
 			echo " ";
 		$i++;
 	}
+	echo "\n";
 }
 
 ?>
