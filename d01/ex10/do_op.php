@@ -25,5 +25,10 @@ if ($argc == 4)
 		$res = "Incorrect Parameters";
 	echo $res."\n";
 }
+else
+{
+	$res = "Incorrect Parameters";
+	echo $res."\n";
+}
 
 ?>
