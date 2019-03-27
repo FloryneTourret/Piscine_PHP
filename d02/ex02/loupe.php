@@ -24,4 +24,4 @@
 
     $ret = preg_replace_callback('/<a(.*)<\/a/Uis', check, $file);
     echo $ret;
-?>%
+?>
