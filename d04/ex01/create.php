@@ -8,7 +8,7 @@ if (!empty($_POST['submit']) && !empty($_POST['login']) && !empty($_POST['passwd
         mkdir('../private');
         $array = array();
         $array[] = [$_POST['login'], hash('whirlpool', $_POST['passwd'])];
-        file_put_contents('private/passwd', serialize($array));
+        file_put_contents('../private/passwd', serialize($array));
         echo "OK\n";
     }
     else
