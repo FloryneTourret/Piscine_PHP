@@ -10,9 +10,9 @@ function auth($login, $passwd)
         $i = 0;
         foreach($liste as $row)
         {
-            if ($row[0] == $_POST['login'])
+            if ($row[0] == $login)
             {
-                if (hash('whirlpool', $_POST['oldpw']) == $row[1])
+                if (hash('whirlpool', $passwd) == $row[1])
                 {
                     return TRUE;
                 }
