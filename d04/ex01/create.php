@@ -1,32 +1,36 @@
 <?php 
 
-$i = 0;
 $error = "ERROR\n";
-if (isset($_POST['submit']) && isset($_POST['login']) && isset($_POST['passwd']))
+if (!empty($_POST['submit']) && !empty($_POST['login']) && !empty($_POST['passwd']) && $_POST['submit'] == "OK")
 {
     if (!(file_exists('private/passwd')))
     {
-        mkdir('private/passwd');
+        mkdir('private');
+        $array = array();
+        $array[] = [$_POST['login'], hash('whirlpool', $_POST['passwd'])];
+        file_put_contents('private/passwd', serialize($array));
+        echo "OK\n";
     }
     else
     {
         $liste = file_get_contents('private/passwd');
-        serialize($liste);
-        while($liste[$i])
+        $liste = unserialize($liste);
+        foreach($liste as $row)
         {
-            if ($liste[$i] == $_POST['login'])
-                return $error;
-            $i++;
+            if ($row[0] == $_POST['login'])
+            {
+                echo $error;
+                return (0);
+            }
         }
-        if ($i == count($liste))
-        {
-            $content = array();
-            $content[0] = $_POST['login'];
-            $content[1] = $_POST['passwd'];
-            file_put_contents('private/passwd', $content);
-        }
+        $liste[] = [$_POST['login'], hash('whirlpool', $_POST['passwd'])];
+        file_put_contents('private/passwd', serialize($liste));
+        echo "OK\n";
     }
 }
 else
-    return ($error);
+{
+    echo $error;
+    return (0);
+}
 ?>
