@@ -2,9 +2,9 @@
 $error = "ERROR\n";
 if (!empty($_POST['login']) && !empty($_POST['oldpw']) && !empty($_POST['newpw']) && $_POST['submit'] == "OK")
 {
-    if (@file_get_contents('../ex01/private/passwd'))
+    if (@file_get_contents('../private/passwd'))
     {
-        $liste = file_get_contents('../ex01/private/passwd');
+        $liste = file_get_contents('../private/passwd');
         $liste = unserialize($liste);
         
         $i = 0;
@@ -15,7 +15,7 @@ if (!empty($_POST['login']) && !empty($_POST['oldpw']) && !empty($_POST['newpw']
                 if (hash('whirlpool', $_POST['oldpw']) == $row[1])
                 {
                     $liste[$i][1] = hash('whirlpool', $_POST['newpw']);
-                    file_put_contents('../ex01/private/passwd', serialize($liste));
+                    file_put_contents('../private/passwd', serialize($liste));
                     echo "OK\n";
                 }
                 else
