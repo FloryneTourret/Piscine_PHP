@@ -1,4 +1,6 @@
 # Piscine_PHP
 
-## D00 125
-## D01 87
+## D00 
+note : 125
+## D01 
+note : 87
