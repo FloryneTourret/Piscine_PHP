@@ -9,7 +9,6 @@
     overflow: hidden;
     background-color: #343434;
 }
-
 .topnav a {
     float: left;
     display: block;
@@ -19,15 +18,14 @@
     text-decoration: none;
     font-size: 17px;
 }
-
 .topnav a:hover {
     background-color: #4E699C;
     color: white;
 }
-
 .topnav .icon {
     display: none;
 }
+
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
@@ -36,7 +34,6 @@
         display: block;
     }
 }
-
 @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
@@ -45,7 +42,7 @@
         top: 0;
     }
     .topnav.responsive a {
-        float: none;
+        float: none !important;
         display: block;
         text-align: left;
     }
