@@ -6,7 +6,7 @@ function check_login($mysqli, $email, $password)
     $user = mysqli_fetch_array($result);
     if (isset($user))
         if (password_verify($password, $user['password']))
-            return TRUE;
+            return $user;
     return FALSE;
 }
 
