@@ -10,3 +10,5 @@ Note : 60
 Note : 100
 ## D04 
 Note : 60
+## Rush00
+Note : 119 (note max)
