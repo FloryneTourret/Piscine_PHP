@@ -45,3 +45,12 @@ Lien de tous les fichiers nécessaire : css, js, img
 > Pour installer la db 127.0.0.1/config/install.php
 
 > docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
+
+
+
+## Bonus
+- Responsive
+- Captcha
+- API
+- MVC
+- Ajax + prompt js
