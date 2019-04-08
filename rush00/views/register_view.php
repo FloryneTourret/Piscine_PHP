@@ -1,17 +1,15 @@
 <div class="bloc-1"></div>
 
-<h1 class="text-center">Inscription</h1>
-
-<div class="bloc-1"></div>
+<h1 class="connexion-title admin-white-text text-center">Inscription</h1>
 
 <div>
-    <form action="register.php" method="post">
-
-        <input class="col-6 offset-3" type="text" name="firstname" id="firstname" placeholder="Votre prénom" required>
-        <input class="col-6 offset-3" type="text" name="lastname" id="lastname" placeholder="Votre nom" required>
-        <input class="col-6 offset-3" type="email" name="email" id="email" placeholder="Votre email" required>
-        <input class="col-6 offset-3" type="password" name="password" id="password" placeholder="Votre mot de passe" required>
-        <input class="col-6 offset-3" type="password" name="password_repeat" id="password_repeat" placeholder="Répétez votre mot de passe" required>
-        <button class="col-6 offset-3" type="submit" value="OK">M'inscrire</button>
+    <form class="col-4 offset-4 add-articles " action="register.php" method="post">
+        <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" required><br>
+        <input type="text" name="lastname" id="lastname" placeholder="Votre nom" required><br>
+        <input type="email" name="email" id="email" placeholder="Votre email" required><br>
+        <input type="password" name="password" id="password" placeholder="Votre mot de passe" required><br>
+        <input type="password" name="password_repeat" id="password_repeat" placeholder="Répétez votre mot de passe" required><br>
+        <div class="g-recaptcha" data-sitekey="6LeUtpwUAAAAAI6IF7x7U1v8_9Ugs71V8F9paE2D"></div>
+        <button type="submit" value="OK">M'inscrire</button>
     </form>
 </div>

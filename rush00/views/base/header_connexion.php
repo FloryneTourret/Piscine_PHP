@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>ft_minishop</title>
-
     <link rel="icon" href="assets/img/favicon.ico" />
 
     <!-- Fichiers css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/connexionstyle.css">
+    <link rel="stylesheet" href="../assets/css/panier.css">
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/grille.css">
     
     <!-- Link des fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-</head>
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
 <body>
 
 <div class="topnav clearfix" id="myTopnav">

@@ -99,3 +99,14 @@
 .bloc-9 {
     height: 90vh
 }
+
+@media screen and (max-width: 1024px) {
+    .col-3{
+        width: 40vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    .col-3{
+        width: 80vw;
+    }
+}

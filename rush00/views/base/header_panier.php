@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>ft_minishop</title>
-
     <link rel="icon" href="assets/img/favicon.ico" />
 
     <!-- Fichiers css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/panier.css">
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/grille.css">
     

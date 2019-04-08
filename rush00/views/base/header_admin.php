@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>ft_minishop</title>
+    <link rel="icon" href="../assets/img/favicon.ico" />
 
     <!-- Fichiers css -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../assets/css/adminstyle.css">
     <link rel="stylesheet" href="../assets/css/master.css">
     <link rel="stylesheet" href="../assets/css/grille.css">
     
@@ -20,10 +22,9 @@
 
 <div class="topnav clearfix" id="myTopnav">
   <a href="../index.php">ft_minishop</a>
-  <a href="../categories.php">Catégories</a>
   <?php if(isset($_SESSION['email'])){ ?>
   <a href="../logout.php" class="float-right">Déconnexion</a>
-  <a href="index.php" class="float-right">Panel admin</a>
+  <a href="commandes.php" class="float-right">Panel admin</a>
   <a href="../profil.php" class="float-right"><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'];?></a>
   <?php }else{?>
     <a href="../register.php" class="float-right">S'inscrire</a>
