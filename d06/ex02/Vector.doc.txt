@@ -1,0 +1,53 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class permits direction representation.
+
+An instance can be constructed by passing a destination Vertex and optionally an origin Vertex.
+If not passed in argument, he origin Vertex is set by default at x:0, y:0, z:0 and w:1.
+
+The class provides the following methods :
+
+Vector   getX();
+Return current value of x.
+
+Vector   getY();
+Return current value of y.
+
+Vector   getZ();
+Return current value of z.
+
+Vector   getW();
+Return current value of w.
+
+You can also call those methods to do simple maths :
+
+float magnitude();
+Return length or norm of the Vector.
+
+Vector normalize();
+Return a normalized vector or a fresh copy of the vector if it is already normalized.
+
+Vector add(Vector $rhs);
+Return the sum of two Vectors.
+
+Vector sub(Vector $rhs );
+Return vector difference of two vectors.
+
+Vector opposite();
+Kinda obvious, this one returns the opposite Vector.
+
+Vector scalarProduct()l
+Return product of a vector with a scalar.
+
+Vector dotProduct(Vector $rhs );
+Return the scalar product of two vectors.
+
+float cos(Vector $rhs );
+Return the cosinus angle between two vectors.
+
+Vector crossProduct(Vector $rhs);
+Return cross product of two vectors (no kidding).
+
+Vector::$verbose
+You can set the $verbose boolean to decide whether you want further information from construct or not.
+
+---------------------------------------------------------------------- Vector ->
