@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 
 require_once 'Color.class.php';
@@ -26,17 +27,17 @@ print( $white   . PHP_EOL );
 
 Color::$verbose = False;
 
-// $black = $white->sub( $red )->sub( $green )->sub( $blue );
-// print( 'Black: ' . $black . PHP_EOL );
+$black = $white->sub( $red )->sub( $green )->sub( $blue );
+print( 'Black: ' . $black . PHP_EOL );
 
-// Color::$verbose = True;
+Color::$verbose = True;
 
-// $darkgrey = new Color( array( 'rgb' => (10 << 16) + (10 << 8) + 10 ) );
-// print( 'darkgrey: ' . $darkgrey . PHP_EOL );
-// $lightgrey = $darkgrey->mult( 22.5 );
-// print( 'lightgrey: ' . $lightgrey . PHP_EOL );
+$darkgrey = new Color( array( 'rgb' => (10 << 16) + (10 << 8) + 10 ) );
+print( 'darkgrey: ' . $darkgrey . PHP_EOL );
+$lightgrey = $darkgrey->mult( 22.5 );
+print( 'lightgrey: ' . $lightgrey . PHP_EOL );
 
-// $random = new Color( array( 'red' => 12.3, 'green' => 31.2, 'blue' => 23.1 ) );
-// print( 'random: ' . $random . PHP_EOL );
+$random = new Color( array( 'red' => 12.3, 'green' => 31.2, 'blue' => 23.1 ) );
+print( 'random: ' . $random . PHP_EOL );
 
 ?>

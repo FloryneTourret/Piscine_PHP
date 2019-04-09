@@ -12,21 +12,21 @@ Class Color{
 
         if (array_key_exists('rgb', $rgb))
         {
-            $this->red = ($rgb['rgb'] / (256*256))%256;
-            $this->green = ($rgb['rgb'] /256) % 256;
-            $this->blue = $rgb['rgb'] % 256;
+            $this->red = round(($rgb['rgb'] / (256*256))%256);
+            $this->green = round(($rgb['rgb'] /256) % 256);
+            $this->blue = round($rgb['rgb'] % 256);
         }
         else{
             if(array_key_exists('red', $rgb))
-                $this->red = $rgb['red'];
+                $this->red = round($rgb['red']);
             if(array_key_exists('green', $rgb))
-                $this->green = $rgb['green'];
+                $this->green = round($rgb['green']);
             if(array_key_exists('blue', $rgb))
-                $this->blue = $rgb['blue'];
+                $this->blue = round($rgb['blue']);
         }
         if (self::$verbose == True)
         {
-            printf('Color( red: '.$this->red.', green: '.$this->green.', blue: '.$this->blue.' ) constructed.'."\n");
+            printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.\n", $this->red, $this->green, $this->blue);
         }
     }
 
@@ -37,9 +37,10 @@ Class Color{
 
     public function __toString()
     {
-        $res = sprintf('Color( red: '.$this->red.', green: '.$this->green.', blue: '.$this->blue.' )');
+        $res = sprintf("Color( red: %3d, green: %3d, blue: %3d )", $this->red, $this->green, $this->blue);
         return ($res);
     }
+
     public function add($color)
     {
         $colorred = $color->red + $this->red;
@@ -51,11 +52,31 @@ Class Color{
         return ($new);
     }
 
+    public function sub($color)
+    {
+        $colorred = $this->red - $color->red;
+        $colorgreen = $this->green - $color->green;
+        $colorblue = $this->blue - $color->blue;
+
+        $new = new Color(array('red' => $colorred, 'green' => $colorgreen, 'blue' => $colorblue));
+
+        return ($new);
+    }
+
+    public function mult($coef)
+    {
+        $colorred = $coef * $this->red;
+        $colorgreen = $coef * $this->green;
+        $colorblue = $coef * $this->blue;
+
+        $new = new Color(array('red' => $colorred, 'green' => $colorgreen, 'blue' => $colorblue));
+
+        return ($new);
+    }
+
     public function __destruct()
     {
-        if (self::$verbose == FALSE)
-        {
-            printf('Color( red: '.$this->red.', green: '.$this->green.', blue: '.$this->blue.' ) destructed.'."\n");
-        }
+        if (self::$verbose == True)
+            printf("Color( red: %3d, green: %3d, blue: %3d ) destructed.\n", $this->red, $this->green, $this->blue);
     }
 }
