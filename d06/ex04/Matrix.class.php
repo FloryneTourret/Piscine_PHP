@@ -1,7 +1,4 @@
 <?php
-require_once( "Vertex.class.php" );
-require_once( "Color.class.php" );
-require_once( "Vector.class.php" );
 class Matrix {
     
     const IDENTITY = 'IDENTITY';
@@ -12,6 +9,7 @@ class Matrix {
     const TRANSLATION = 'TRANSLATION';
     const PROJECTION = 'PROJECTION';
     const PRODUCT = 'PRODUCT';
+    const TRANSPOSE = 'TRANSPOSE';
 
     public static $verbose = False;
     private $_preset;
@@ -58,6 +56,10 @@ class Matrix {
             }
             case ( self::PRODUCT ): {
                 $this->ft_init_mul($kwargs);
+                break ;
+            }
+            case ( self::TRANSPOSE ): {
+                $this->ft_init_transpose($kwargs);
                 break ;
             }
             default:
@@ -147,6 +149,18 @@ class Matrix {
             }
         }
     }
+    private function ft_init_transpose( $kwargs ) {
+        if ( array_key_exists( 'transpose', $kwargs ) ) {
+            for ( $i = 0; $i < 4; $i++ ) {
+                for ( $j = 0; $j < 4; $j++) {
+                    if ( $i === $j )
+                        $this->_matrix[$i][$j] = $kwargs['transpose']->getIndex( $i, $j );
+                    else
+                        $this->_matrix[$i][$j] = $kwargs['transpose']->getIndex( $j, $i );
+                }
+            }
+        }
+    }
     function __destruct() {
         if ( self::$verbose )
             printf( "Matrix instance destructed\n" );
@@ -186,7 +200,7 @@ class Matrix {
         }
         return ( new Matrix( array( 'preset' => self::PRODUCT, 'prod' => $res ) ) );
     }
-    function transformVertex( Vertex $vtx ) {
+    public function transformVertex( Vertex $vtx ) {
         $res = array();
         for ( $i = 0; $i < 4; $i++ ) {
             $res[$i] = 0;
