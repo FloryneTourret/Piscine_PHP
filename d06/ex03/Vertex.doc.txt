@@ -1,0 +1,42 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class represents a point in space by encapsulating its coordinates.
+
+An instance can be contructed by passing the coordinates x, y, z.
+
+You can optionnaly pass the w point or a color, respectively set at 1.0 and white by default.
+
+The class provides the following methods :
+
+Vertex   getX();
+Return current value of x.
+
+Vertex   getY();
+Return current value of y.
+
+Vertex   getZ();
+Return current value of z.
+
+Vertex   getW();
+Return current value of w.
+
+Vertex   getColor();
+Return current value of color.
+
+Vertex   setX($x);
+Assign  a new value for x.
+
+Vertex   setX($z);
+Assign  a new value for z.
+
+Vertex   setX($y);
+Assign  a new value for y.
+
+Vertex   setW($w);
+Assign  a new value for w.
+
+Vertex   setColor(array $color);
+Change current color with a new color instance by passing RGB parameters.
+
+You can set the $verbose boolean to decide wether you want further informations from construct.
+
+---------------------------------------------------------------------- Vertex ->
