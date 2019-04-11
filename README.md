@@ -22,4 +22,4 @@ Note : 119 (note max)
 Note : 15 (corrigé, le reste est tout bon)
 
 > D06
-Note : 48 rip
+Note : 54
