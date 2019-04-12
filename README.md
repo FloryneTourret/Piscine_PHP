@@ -23,3 +23,6 @@ Note : 15 (corrigé, le reste est tout bon)
 
 > D06
 Note : 54
+
+> D07
+Note : 100
