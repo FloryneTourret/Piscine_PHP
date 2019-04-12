@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <div onclick="gonfler(10);" onmouseout="degonfler(5);" style="width: 200px;height:200px;background-color:red;border-radius:100%;" id="balloon"></div>
+        <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+        
+        <script>
+        
+        function gonfler(len){
+            var ballon = $('#balloon');
+            var ratio = ballon.width();
+
+            if (ratio + len > 420)
+            {
+                ballon.width("200px");
+                ballon.height("200px");
+            }
+            else
+            {
+                var color = ballon.css("background-color");
+                if (color == "rgb(255, 0, 0)")
+                    ballon.css("background-color", "rgb(0, 255, 0)");
+                else if (color == "rgb(0, 255, 0)")
+                    ballon.css("background-color", "rgb(0, 0, 255)");
+                else if (color == "rgb(0, 0, 255)")
+                    ballon.css("background-color", "rgb(255, 0, 0)");
+
+                ballon.width(ratio + len + 'px');
+                ballon.height(ratio + len + 'px');
+            }
+        }
+
+        function degonfler(len)
+        {
+            var ballon = $('#balloon');
+            var ratio = ballon.width();
+
+            var color = ballon.css("background-color");
+
+            if (!(ratio - len < 200))
+            {
+                if (color == "rgb(255, 0, 0)")
+                    ballon.css("background-color", "rgb(0, 0, 255)");
+                else if (color == "rgb(0, 255, 0)")
+                    ballon.css("background-color", "rgb(255, 0, 0)");
+                else if (color == "rgb(0, 0, 255)")
+                    ballon.css("background-color", "rgb(0, 255, 0)");
+
+                ballon.width(ratio - len + 'px');
+                ballon.height(ratio - len + 'px');
+            }
+        }
+        
+        </script>
+    </body>
+</html>

@@ -1,62 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Balloon</title>
-</head>
-<body>
-    <div onclick="gonfler(10);" onmouseout="degonfler(5);" style="width: 200px;height:200px;background-color:red;border-radius:100%;" id="balloon"></div>
-    <script>
-    
-    function gonfler(len){
-        var ballon = document.getElementById('balloon');
-        var ratio = ballon.style.width;
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <div onclick="gonfler(10);" onmouseout="degonfler(5);" style="width: 200px;height:200px;background-color:red;border-radius:100%;" id="balloon"></div>
+        <script>
+        
+        function gonfler(len){
+            var ballon = document.getElementById('balloon');
+            var ratio = ballon.style.width;
 
-        ratio = Number(ratio.substring(0, ratio.length - 2));
-        if (ratio + len > 420)
-        {
-            ballon.style.width = "200px";
-            ballon.style.height = "200px";
+            ratio = Number(ratio.substring(0, ratio.length - 2));
+            if (ratio + len > 420)
+            {
+                ballon.style.width = "200px";
+                ballon.style.height = "200px";
+            }
+            else
+            {
+                var color = ballon.style.backgroundColor;
+                if (color == "red")
+                    ballon.style.backgroundColor = "green";
+                else if (color == "green")
+                    ballon.style.backgroundColor = "blue";
+                else if (color == "blue")
+                    ballon.style.backgroundColor = "red";
+
+                ballon.style.width = ratio + len + 'px';
+                ballon.style.height = ratio + len + 'px';
+            }
         }
-        else
+
+        function degonfler(len)
         {
+            var ballon = document.getElementById('balloon');
+            var ratio = ballon.style.width;
+
             var color = ballon.style.backgroundColor;
-            if (color == "red")
-                ballon.style.backgroundColor = "green";
-            else if (color == "green")
-                ballon.style.backgroundColor = "blue";
-            else if (color == "blue")
-                ballon.style.backgroundColor = "red";
 
-            ballon.style.width = ratio + len + 'px';
-            ballon.style.height = ratio + len + 'px';
+            ratio = Number(ratio.substring(0, ratio.length - 2));
+            if (!(ratio - len < 200))
+            {
+                if (color == "red")
+                    ballon.style.backgroundColor = "blue";
+                else if (color == "green")
+                    ballon.style.backgroundColor = "red";
+                else if (color == "blue")
+                    ballon.style.backgroundColor = "green";
+
+                ballon.style.width = ratio - len + 'px';
+                ballon.style.height = ratio - len + 'px';
+            }
         }
-    }
-
-    function degonfler(len)
-    {
-        var ballon = document.getElementById('balloon');
-        var ratio = ballon.style.width;
-
-        var color = ballon.style.backgroundColor;
-
-        ratio = Number(ratio.substring(0, ratio.length - 2));
-        if (!(ratio - len < 200))
-        {
-            if (color == "red")
-                ballon.style.backgroundColor = "blue";
-            else if (color == "green")
-                ballon.style.backgroundColor = "red";
-            else if (color == "blue")
-                ballon.style.backgroundColor = "green";
-                
-            ballon.style.width = ratio - len + 'px';
-            ballon.style.height = ratio - len + 'px';
-        }
-    }
-    
-    </script>
-</body>
+        
+        </script>
+    </body>
 </html>

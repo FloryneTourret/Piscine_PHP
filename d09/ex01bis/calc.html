@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <input id="nb1" type="text">
+        <select id="op">
+            <option id="add">+</option>
+            <option id="sub">-</option>
+            <option id="mul">*</option>
+            <option id="div">/</option>
+            <option id="mod">%</option>
+        </select>
+        <input id="nb2" type="text"><br>
+        <input onclick="calc()" type="submit" value="Try me!">
+        <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+        <script>
+            
+            setInterval(function(){alert("Please, use me...");}, 30000);
+
+            function calc()
+            {
+                var nb1 = $('#nb1').val();
+                var op = $('#op').val();
+                var nb2 = $('#nb2').val();
+
+                if (nb1 >= 0 && nb2 >=0)
+                {
+                    if (op == '+')
+                    {
+                        alert(+nb1 + +nb2);
+                        console.log(+nb1 + +nb2);
+                    }
+                    else if (op == '-')
+                    {
+                        alert(+nb1 - +nb2);
+                        console.log(nb1 - nb2);
+                    }
+                    else if (op == "*")
+                    {
+                        alert(+nb1 * +nb2);
+                        console.log(+nb1 * +nb2);
+                    }
+                    else if (op == "/")
+                    {
+                        if (nb2 == 0)
+                        {
+                            alert("It's over 9000!");
+                            console.log("It's over 9000!");
+                        }
+                        else
+                        {
+                            alert(+nb1 / +nb2);
+                            console.log(+nb1 / +nb2);
+                        }
+                    }
+                    else if (op == "%")
+                    {
+                        if (nb2 == 0)
+                        {
+                            alert("It's over 9000!");
+                            console.log("It's over 9000!");
+                        }
+                        else
+                        {
+                            alert(+nb1 % +nb2);
+                            console.log(+nb1 % +nb2);
+                        }
+                    }
+                }
+                else
+                    alert("Error :(");
+
+            }
+        </script>
+    </body>
+</html>
