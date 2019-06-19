@@ -26,3 +26,12 @@ Note : 54
 
 > D07
 Note : 100
+
+> D08
+Note : 85
+
+> D09
+Note : 80
+
+
+Total: 111
